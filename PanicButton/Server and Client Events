@@ -1,0 +1,10 @@
+Server Events
+• "PanicButton:GetInformation" > this event is called when the user presses their panic button. This will get information from the player who has pressed the button. This will
+in return trigger the "PanicButton:SendInformation" client event
+• "PanicButton:ClearPanicButtonSend" > this event is called when the user does /clearpb in chat. This clears the active panic button. This will in return trigger the 
+"PanicButton:ClearPanicButtonResult" client event
+
+Client Events
+• "PanicButton:SendInformation" > this is the client side of creating the panic button information including the sound effects, drawing the notification, and creating the blip
+• "PanicButton:AlreadyActive" > this event is triggered when the player tries to activate their panic button but a panic button is already activated
+• "PanicButton:ClearPanicButtonResult" > this is the client side of clearing the active panic button (deleting the blip and drawing the notification)
